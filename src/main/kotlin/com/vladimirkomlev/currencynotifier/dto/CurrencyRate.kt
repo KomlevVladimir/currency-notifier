@@ -2,7 +2,6 @@ package com.vladimirkomlev.currencynotifier.dto
 
 import com.fasterxml.jackson.annotation.JsonProperty
 
-
 data class CurrencyRate(
         val disclaimer: String,
         val license: String,
