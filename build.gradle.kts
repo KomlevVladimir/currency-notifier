@@ -16,6 +16,9 @@ repositories {
 }
 
 dependencies {
+	val kotlinTestVersion = "3.4.2"
+	val mockKVersion = "1.8.13"
+
 	implementation("org.springframework.boot:spring-boot-starter-actuator")
 	implementation("org.springframework.boot:spring-boot-starter-amqp")
 	implementation("org.springframework.boot:spring-boot-starter-web")
@@ -23,10 +26,13 @@ dependencies {
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-	testImplementation("org.springframework.boot:spring-boot-starter-test") {
+
+	testImplementation("org.springframework.boot:spring-boot-starter-test")
+	{
 		exclude(group = "org.junit.vintage", module = "junit-vintage-engine")
 	}
-	testImplementation("org.springframework.amqp:spring-rabbit-test")
+	testImplementation("io.kotlintest:kotlintest-runner-junit5:$kotlinTestVersion")
+	testImplementation("io.mockk:mockk:$mockKVersion")
 }
 
 tasks.withType<Test> {

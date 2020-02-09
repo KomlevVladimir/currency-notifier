@@ -1,4 +1,4 @@
-package com.vladimirkomlev.currencynotifier.domain
+package com.vladimirkomlev.currencynotifier.service
 
 import com.vladimirkomlev.currencynotifier.config.properties.AppProperties
 import com.vladimirkomlev.currencynotifier.dto.CurrencyRate
