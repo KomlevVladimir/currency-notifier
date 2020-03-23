@@ -16,7 +16,6 @@ class CurrencyServiceSpec : StringSpec({
     val restTemplate = mockk<RestTemplate>()
     val appProperties = mockk<AppProperties>()
 
-
     "Currency rate notify with usdRub less than 60 and usdKzt more than 370" {
         val mockCurrencyRate = CurrencyRate(
                 disclaimer = "test",
